@@ -5,9 +5,7 @@
 ## Technologies implemented:
 
 - ASP.NET Core 2.2 (with .NET Core 2.2)
- - ASP.NET MVC Core 
- - ASP.NET WebApi Core
- - ASP.NET Identity Core
+- ASP.NET WebApi Core
 - Entity Framework Core 2.2
 - .NET Core Native DI
 - AutoMapper
