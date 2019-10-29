@@ -1,4 +1,6 @@
-﻿using Edge.Exago.Infra.CrossCutting.IoC;
+﻿using AutoMapper;
+using Edge.Exago.Application.AutoMapper;
+using Edge.Exago.Infra.CrossCutting.IoC;
 using Edge.Exago.WebApi.Configurations;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -27,7 +29,7 @@ namespace Edge.Exago.WebApi
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddAutoMapperSetup();
+            //services.AddAutoMapperSetup();
 
             services.AddSwaggerGen(s =>
             {
@@ -43,8 +45,14 @@ namespace Edge.Exago.WebApi
             // Adding MediatR for Domain Events and Notifications
             services.AddMediatR(typeof(Startup));
 
+            services.AddAutoMapper(typeof(AutoMapperConfig));
+            // Registering Mappings automatically only works if the 
+            // Automapper Profile classes are in ASP.NET project
+            //AutoMapperConfig.RegisterMappings();
+
             // .NET Native DI Abstraction
-            RegisterServices(services);
+            // Adding dependencies from another layers (isolated from Presentation)
+            NativeInjectorBootStrapper.RegisterServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,12 +83,6 @@ namespace Edge.Exago.WebApi
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Exago Project API v1.1");
             });
-        }
-
-        private static void RegisterServices(IServiceCollection services)
-        {
-            // Adding dependencies from another layers (isolated from Presentation)
-            NativeInjectorBootStrapper.RegisterServices(services);
         }
     }
 }

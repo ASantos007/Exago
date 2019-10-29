@@ -12,7 +12,7 @@ namespace Edge.Exago.Application.AutoMapper
                .ConstructUsing(c => new CategoryViewModel
                {
                    Id = c.Id,
-                   Name = c.Name
+                   Name = c.Name,
                });
 
             CreateMap<Product, ProductViewModel>();

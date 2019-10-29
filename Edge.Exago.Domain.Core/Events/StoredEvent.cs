@@ -13,6 +13,9 @@ namespace Edge.Exago.Domain.Core.Events
             User = user;
         }
 
+        // EF Constructor
+        protected StoredEvent() { }
+
         public Guid Id { get; private set; }
 
         public string Data { get; private set; }

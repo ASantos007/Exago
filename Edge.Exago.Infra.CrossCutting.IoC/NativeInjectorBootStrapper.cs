@@ -16,16 +16,32 @@ using Edge.Exago.Infra.Data.Repositories.EventSourcing;
 using Edge.Exago.Infra.Data.UoW;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Edge.Exago.Infra.CrossCutting.IoC
 {
     public class NativeInjectorBootStrapper
     {
-        public static void RegisterServices(IServiceCollection services)
+        public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
             // ASP.NET HttpContext dependency
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            //Database
+            services.AddDbContextPool<EventStoreSQLContext>(builder =>
+            {
+                builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), opt =>
+                {
+                });
+            });
+            services.AddDbContextPool<ExagoContext>(builder =>
+            {
+                builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), opt =>
+                {
+                });
+            });
 
             // Domain Bus (Mediator)
             services.AddScoped<IMediatorHandler, InMemoryBus>();
