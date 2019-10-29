@@ -14,7 +14,7 @@ namespace Edge.Exago.Infra.Data.Contexts
             _env = env;
         }
 
-        public DbSet<Category> Customers { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

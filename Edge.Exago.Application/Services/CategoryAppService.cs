@@ -19,10 +19,7 @@ namespace Edge.Exago.Application.Services
         private readonly IEventStoreRepository _eventStoreRepository;
         private readonly IMediatorHandler _bus;
 
-        public CategoryAppService(IMapper mapper,
-                                  ICategoryRepository categoryRepository,
-                                  IMediatorHandler bus,
-                                  IEventStoreRepository eventStoreRepository)
+        public CategoryAppService(IMapper mapper, ICategoryRepository categoryRepository, IMediatorHandler bus, IEventStoreRepository eventStoreRepository)
         {
             _mapper = mapper;
             _categoryRepository = categoryRepository;
@@ -60,7 +57,7 @@ namespace Edge.Exago.Application.Services
 
         public IList<CategoryHistoryData> GetAllHistory(Guid id)
         {
-            throw new NotImplementedException();
+            return CategoryHistory.ToJavaScriptCategoryHistory(_eventStoreRepository.All(id));
         }
 
         public void Dispose()

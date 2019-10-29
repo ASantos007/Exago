@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Edge.Exago.Application.Interfaces;
 using Edge.Exago.Application.ViewModels;
 using Edge.Exago.Domain.Core.Bus;
@@ -20,14 +19,14 @@ namespace Edge.Exago.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("category-management")]
-        public IActionResult Get()
+        [Route("category-getall")]
+        public IActionResult GetAll()
         {
             return Response(_categoryAppService.GetAll());
         }
 
         [HttpGet]
-        [Route("category-management/{id:guid}")]
+        [Route("category-get/{id:guid}")]
         public IActionResult Get(Guid id)
         {
             var categoryViewModel = _categoryAppService.GetById(id);
