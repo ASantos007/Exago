@@ -19,17 +19,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{DAB88739-920A-4769-A30D-284193D07D7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Application", "Edge.Exago.Application\Edge.Exago.Application.csproj", "{B5425FCA-8F5D-4093-882B-75BAA34E58DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Application", "Edge.Exago.Application\Edge.Exago.Application.csproj", "{B5425FCA-8F5D-4093-882B-75BAA34E58DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Domain", "Edge.Exago.Domain\Edge.Exago.Domain.csproj", "{7D9C6330-077B-4B10-8517-C2BF8AEC9CD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Domain", "Edge.Exago.Domain\Edge.Exago.Domain.csproj", "{7D9C6330-077B-4B10-8517-C2BF8AEC9CD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Domain.Core", "Edge.Exago.Domain.Core\Edge.Exago.Domain.Core.csproj", "{FD57FE19-2ACF-45DB-8F59-7B24CF8C3CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Domain.Core", "Edge.Exago.Domain.Core\Edge.Exago.Domain.Core.csproj", "{FD57FE19-2ACF-45DB-8F59-7B24CF8C3CCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Infra.Data", "Edge.Exago.Infra.Data\Edge.Exago.Infra.Data.csproj", "{BB0A6564-24B3-4187-8AC5-3230978E9C74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Infra.Data", "Edge.Exago.Infra.Data\Edge.Exago.Infra.Data.csproj", "{BB0A6564-24B3-4187-8AC5-3230978E9C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Infra.CrossCutting.Bus", "Edge.Exago.Infra.CrossCutting.Bus\Edge.Exago.Infra.CrossCutting.Bus.csproj", "{BDD37651-7436-4DF4-80F1-544890C0D256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Infra.CrossCutting.Bus", "Edge.Exago.Infra.CrossCutting.Bus\Edge.Exago.Infra.CrossCutting.Bus.csproj", "{BDD37651-7436-4DF4-80F1-544890C0D256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edge.Exago.Infra.CrossCutting.IoC", "Edge.Exago.Infra.CrossCutting.IoC\Edge.Exago.Infra.CrossCutting.IoC.csproj", "{82E75544-E6DC-4F07-8D28-78D013A60AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edge.Exago.Infra.CrossCutting.IoC", "Edge.Exago.Infra.CrossCutting.IoC\Edge.Exago.Infra.CrossCutting.IoC.csproj", "{82E75544-E6DC-4F07-8D28-78D013A60AB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09E831D8-CF2C-45BD-B003-39F218B4037E}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,6 +8,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Edge.Exago.Application\Edge.Exago.Application.csproj" />
+    <ProjectReference Include="..\Edge.Exago.Domain.Core\Edge.Exago.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
