@@ -8,13 +8,7 @@ namespace Edge.Exago.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<Category, CategoryViewModel>()
-               .ConstructUsing(c => new CategoryViewModel
-               {
-                   Id = c.Id,
-                   Name = c.Name,
-               });
-
+            CreateMap<Category, CategoryViewModel>();
             CreateMap<Product, ProductViewModel>();
         }
     }
